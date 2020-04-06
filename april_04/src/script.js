@@ -212,13 +212,13 @@ let month = prompt('Enter the number of a month.');
 let number3 = +prompt('Enter a number.');
 let extent = +prompt('Enter the extent you want to raise the number');
 var i = 1;
-let result = number3;
+let result2 = number3;
 while (i < extent) {
     i++;
-    result = result * number3;
+    result2 = result2 * number3;
 }
 
-console.log(result);
+console.log(result2);
 
 
 //3.  One task using do while loop:
