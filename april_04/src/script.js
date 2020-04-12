@@ -7,19 +7,35 @@ let calcNumber2 = +prompt('Enter another number.');
 let operation = prompt('What do you want to do with the numbers? Enter + - * /');
 let result;
 
-if (operation == '+') {
-    result = calcNumber1 + calcNumber2;
-}
-    else if (operation == '-') {
+switch(operation) {
+    case "+" :
+        result = calcNumber1 + calcNumber2;
+        break;
+    case '-'  :
         result = calcNumber1 - calcNumber2;
-    }
-    else if (operation == '*') {
+        break;
+    case '*' :
         result = calcNumber1 * calcNumber2;
-    }
-    else if (operation == '/') {
+        break;
+    case '/' :
         result = calcNumber1 / calcNumber2;
-    }
-    console.log(`${calcNumber1} ${operation} ${calcNumber2} = ${result}`);
+        break;
+}
+console.log(`${calcNumber1} ${operation} ${calcNumber2} = ${result}`);
+
+// if (operation == '+') {
+//     result = calcNumber1 + calcNumber2;
+// }
+//     else if (operation == '-') {
+//         result = calcNumber1 - calcNumber2;
+//     }
+//     else if (operation == '*') {
+//         result = calcNumber1 * calcNumber2;
+//     }
+//     else if (operation == '/') {
+//         result = calcNumber1 / calcNumber2;
+//     }
+//     console.log(`${calcNumber1} ${operation} ${calcNumber2} = ${result}`);
 
 
 // 2. Count the factorial of the number given by a user. For example, 4! is 
@@ -58,7 +74,7 @@ let solution = 0;
 do {
     solution = prompt('What is 2 + 2 * 2?');
 }
-    while (solution != 8);
+    while (solution != 6);
     alert('You answered correct!');
 
 // CLASSWORK PART 1
