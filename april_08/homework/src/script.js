@@ -2,8 +2,9 @@
 // “Even” for even numbers or “Odd” for odd numbers.
 
 function number(yourNumber) {
+    let result;
     if (yourNumber % 2 === 0) { //Check for even numbers, by dividing by 2, remainder should be 0.
-        let result = "Even!";   //If it's even, return and print even
+        result = "Even!";   //If it's even, return and print even
         return result;
     }
     else {
@@ -28,6 +29,7 @@ function comment(sentence) {
 }
 
 console.log(comment('This website is for losers LOL'));
+console.log(comment('I am a stupid troll'));
 
 // 3. Write a function which repeats the given string exact number of times. 
 // For example, repeatString("Hello", 5) returns “HelloHelloHelloHelloHello”.
@@ -39,3 +41,4 @@ function repeatString(yourString, aNumber) {
 }
 
 console.log(repeatString('Hello', 5));
+console.log(repeatString('Goodbye', 3));
