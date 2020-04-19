@@ -126,7 +126,7 @@
 
 
 // for(let book of myLibrary) {
-//     // console.log(item);
+//     // console.log(book);
 //     if (book.isRead) {
 //         console.log(`I already read ${book.title} by ${book.author}. `);
 //     }
