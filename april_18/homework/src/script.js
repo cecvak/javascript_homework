@@ -62,7 +62,7 @@ addGroceries({name: 'Cheese', amount: 2, isbought: false} );
 // addGroceries({name: 'Bread', amount: 2, isbought: false});
 
 
-console.log(groceries);
+// console.log(groceries);
 groceries.forEach(displayGroceries);
 
 
@@ -92,3 +92,57 @@ groceries.forEach(displayGroceries);
 // 2) Display all the classrooms for a given faculty; 
 // 3) Display only the classrooms that would fit a given group. 
 //     A group object contains a name, the number of students, and the faculty name.
+
+
+let classrooms = [];    //create an array of classrooms
+
+function Classroom (name, seats, faculty) {     //create objects of classrooms
+    this.name = name;
+    this.seats = seats;
+    this.faculty = faculty;
+}
+
+
+// add rooms
+let room1 = new Classroom('Red room', 20, 'Maths');
+classrooms.push(room1);
+let room2 = new Classroom('Blue room', 14, 'English');
+classrooms.push(room2);
+let room3 = new Classroom('Purple room', 15, 'Science');
+let room4 = new Classroom('Orange room', 16, 'English');
+let room5 = new Classroom('Gold room', 10, 'Philosophy');
+let room6 = new Classroom('Yellow room', 13, 'Maths');
+let room7 = new Classroom('Black room', 12, 'English');
+classrooms.push(room3, room4, room5, room6, room7);
+
+// function to display all classrooms
+classrooms.forEach(function(room) {
+    console.log(`Classroom name: ${room.name}, Number of seats: ${room.seats}, Faculty: ${room.faculty}.`);
+});
+
+// function to display classrooms for a given faculty
+function displayFacultyroom(chosenFaculty) {
+    for(let facultyname of classrooms) {
+        if (facultyname.faculty.toLowerCase() == chosenFaculty.faculty.toLowerCase()) {
+            console.log(`Room for ${facultyname.faculty}: Classroom name: ${facultyname.name}, Number of seats: ${facultyname.seats}`)
+        }
+    }
+};
+
+displayFacultyroom({faculty: 'Maths'});
+displayFacultyroom({faculty: 'science'});
+
+
+// Function to display rooms for a given number of students for a given faculty
+function displayGroup(newGroup) {
+    for (let group of classrooms){
+        if (group.faculty.toLowerCase() == newGroup.faculty.toLowerCase() && group.seats <= newGroup.seats)  {
+            console.log(`Rooms for your group: ${group.name}`);
+        }   //else {
+        //     console.log(`There were no rooms that matched your search.`);
+        }
+};
+
+displayGroup({seats: 20, faculty: 'Maths' });
+displayGroup({seats: 15, faculty: 'English' });
+displayGroup({seats: 35, faculty: 'English' });
