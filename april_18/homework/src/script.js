@@ -59,8 +59,7 @@ addGroceries({name: 'Milk', amount: 2, isbought: false});
 addGroceries({name: 'bread', amount: 2, isbought: false});
 addGroceries({name: 'eggs', amount: 12, isbought: false});
 addGroceries({name: 'Cheese', amount: 2, isbought: false} );
-// addGroceries({name: 'Bread', amount: 2, isbought: false});
-
+addGroceries({name: 'Bread', amount: 2, isbought: false});
 
 // console.log(groceries);
 groceries.forEach(displayGroceries);
@@ -104,14 +103,14 @@ function Classroom (name, seats, faculty) {     //create objects of classrooms
 
 
 // add rooms
-let room1 = new Classroom('Red room', 20, 'Maths');
+let room1 = new Classroom('Red room', 20, 'Math');
 classrooms.push(room1);
 let room2 = new Classroom('Blue room', 14, 'English');
 classrooms.push(room2);
 let room3 = new Classroom('Purple room', 15, 'Science');
 let room4 = new Classroom('Orange room', 16, 'English');
 let room5 = new Classroom('Gold room', 10, 'Philosophy');
-let room6 = new Classroom('Yellow room', 13, 'Maths');
+let room6 = new Classroom('Yellow room', 13, 'Math');
 let room7 = new Classroom('Black room', 12, 'English');
 classrooms.push(room3, room4, room5, room6, room7);
 
@@ -129,20 +128,54 @@ function displayFacultyroom(chosenFaculty) {
     }
 };
 
-displayFacultyroom({faculty: 'Maths'});
+displayFacultyroom({faculty: 'Math'});
 displayFacultyroom({faculty: 'science'});
 
 
-// Function to display rooms for a given number of students for a given faculty
-function displayGroup(newGroup) {
-    for (let group of classrooms){
-        if (group.faculty.toLowerCase() == newGroup.faculty.toLowerCase() && group.seats <= newGroup.seats)  {
-            console.log(`Rooms for your group: ${group.name}`);
-        }   //else {
-        //     console.log(`There were no rooms that matched your search.`);
-        }
-};
+let group = {
+    name: 'Group 1',
+    students: 15,
+    faculty: 'Science'
+ }
 
-displayGroup({seats: 20, faculty: 'Maths' });
-displayGroup({seats: 15, faculty: 'English' });
-displayGroup({seats: 35, faculty: 'English' });
+ let group2 = {
+    name: 'Group 2',
+    students: 21,
+    faculty: 'English'
+ }
+
+ let group3 = {
+    name: 'Group 3',
+    students: 12,
+    faculty: 'Math'
+ }
+
+ let group4 = {
+    name: 'Group 4',
+    students: 12,
+    faculty: 'english'
+ }
+
+
+let findGroup;
+let result;
+function findRooms(newGroup) {
+
+    findGroup = classrooms.filter(function (f) {
+    return f.seats >= newGroup.students && f.faculty.toLowerCase() === newGroup.faculty.toLowerCase();
+    
+})
+    if (findGroup.length == 0) {
+        console.log (`There were no matches for ${newGroup.name}.`);
+    }
+    else {
+        for (let yourGroup of findGroup) {
+        console.log (`Matches for your group ${newGroup.name}: Room: ${yourGroup.name}.`);
+    }}
+}
+
+findRooms(group);
+findRooms(group2);
+findRooms(group3);
+findRooms(group4);
+ 
