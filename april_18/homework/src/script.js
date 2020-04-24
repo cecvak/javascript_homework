@@ -30,12 +30,19 @@ let groceries = [
 ];
 
 // Function to display grocery list
-function displayGroceries(grocery) {
-    console.log(`Product name: ${grocery.name}, Amount: ${grocery.amount}, Has been bought: ${grocery.isbought}.`);
+// function displayGroceries(grocery) {
+//     console.log(`Product name: ${grocery.name}, Amount: ${grocery.amount}, Has been bought: ${grocery.isbought}.`);
 
+// }
+
+// groceries.forEach(displayGroceries);
+
+function displayProducts() {
+    for(let product of groceries)
+    console.log(`Product name: ${product.name}, Amount: ${product.amount}, Has been bought: ${product.isbought}.`);
 }
 
-groceries.forEach(displayGroceries);
+displayProducts(groceries);
 
 //Function for adding to list, check if name exists if so increase amount if not add a new item
 function addGroceries(newGroceries) {
@@ -62,7 +69,8 @@ addGroceries({name: 'Cheese', amount: 2, isbought: false} );
 addGroceries({name: 'Bread', amount: 2, isbought: false});
 
 // console.log(groceries);
-groceries.forEach(displayGroceries);
+// groceries.forEach(displayGroceries);
+displayProducts(groceries);
 
 
 // Function for purchasing a product. The function accepts the name of a product and 
@@ -79,8 +87,8 @@ function bought(purchased) {
 
 bought({name: 'cheese'});
 bought({name: 'bread'});
-groceries.forEach(displayGroceries);
-
+// groceries.forEach(displayGroceries);
+displayProducts(groceries);
 
 
 // 2. Create an array of classrooms. 
@@ -115,9 +123,16 @@ let room7 = new Classroom('Black room', 12, 'English');
 classrooms.push(room3, room4, room5, room6, room7);
 
 // function to display all classrooms
-classrooms.forEach(function(room) {
-    console.log(`Classroom name: ${room.name}, Number of seats: ${room.seats}, Faculty: ${room.faculty}.`);
-});
+// classrooms.forEach(function(room) {
+//     console.log(`Classroom name: ${room.name}, Number of seats: ${room.seats}, Faculty: ${room.faculty}.`);
+// });
+
+function displayClassrooms() {
+    for(let rooms of classrooms)
+    console.log(`Classroom name: ${rooms.name}, Number of seats: ${rooms.seats}, Faculty: ${rooms.faculty}.`);
+}
+
+displayClassrooms(classrooms);
 
 // function to display classrooms for a given faculty
 function displayFacultyroom(chosenFaculty) {
@@ -157,10 +172,9 @@ let group = {
  }
 
 
-let findGroup;
-let result;
-function findRooms(newGroup) {
 
+function findRooms(newGroup) {
+    let findGroup;
     findGroup = classrooms.filter(function (f) {
     return f.seats >= newGroup.students && f.faculty.toLowerCase() === newGroup.faculty.toLowerCase();
     
