@@ -74,7 +74,7 @@ class refill extends Marker {
     
 }
 
-let marker1 = new Marker('blue', 10);
+let marker1 = new Marker('blue', 100);
 let marker2 = new refill('red', 50);
 marker1.text();
 marker2.refillMarker();

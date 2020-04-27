@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/19c75b59f6.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        /* .hide {
+            visibility: hidden;
+        } */
+        div {
+            margin: 40px;
+        }
+      </style>
+
+<div class="first_block">
+    <p id="text">I am visible!!</p>
+
+    <button onclick="hide()">Hide me!</button>
+</div>
+    
+
+<div class="second_block">
+    <label for="progress">Progress</label>
+
+    <progress id="progress" max="100" value="0"></progress>
+    <p id="progressText">0%</p>
+    <p id="success">Still working...</p>
+    <button onclick="fill()">Fill me!</button>
+</div>
+   
+<div class="third_block">
+    <button onclick="like()"> <i  class="fas fa-heart"></i> </button>
+    <p id="likes" >0 likes</p>
+</div>
+    
+    <script src="src/script.js"></script>
+</body>
+</html>
