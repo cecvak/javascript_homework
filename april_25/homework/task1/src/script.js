@@ -33,35 +33,34 @@ let playList = [
             {
              author: "METALLICA",
              song:"ENTER SANDMAN"
-            }
+            },
             ];
 
-    for(let item of playList) {
-    console.log(`Artist: ${item.author}, Song: ${item.song}.`);
-    // document.write(`<p>Artist: ${item.author}, Song: ${item.song}.</p>`);
-}
+//     for(let item of playList) {
+//     console.log(`Artist: ${item.author}, Song: ${item.song}.`);
+// }
 
-function makeList(array) {
+function makeList() {
 
         for(let array of playList) {
         let artist = array.author;
         let song = array.song;
-        let artist2 = artist;
-        artist2 = artist2.toLowerCase()
+
+        artist = artist.toLowerCase()
             .split(' ')
             .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
             .join(' ');
 
-        let song2 = song;
-        song2 = song2.toLowerCase()
+        song = song.toLowerCase()
             .split(' ')
             .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
             .join(' ');
+
         let item = document.createElement('li');
-        item.innerText = `${artist2} - ${song2}`;
+        item.innerText = `${artist} - ${song}`;
         let ol = document.getElementsByTagName('ol')[0];
         ol.appendChild(item);
-        console.log(item);
+        // console.log(item);
     }
 }
 

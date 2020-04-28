@@ -2,21 +2,22 @@ body {
     display: flex;
     justify-content: center;
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 50px;
     color: white;
 }
 
-ul {
+ol {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 li {
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     line-height: 30px;
     color: white;
 }

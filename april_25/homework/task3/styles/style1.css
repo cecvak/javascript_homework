@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.circle {
+    margin-top: 20px;
+    font-size: 100px;
+    /* color: grey; */
+}
+
+.grey {
+    color: grey;
+}
+
+.green.on {
+    color: green;
+}
+
+.yellow.on {
+    color: yellow;
+}
+
+.red.on {
+    color: red;
+}
+
+ul {
+    list-style: none;
+    padding: 20px;
+    background-color: black;
+}
+
+button {
+    margin-top: 30px;
+    border: none;
+    background-color: #646363;
+    color: #F4EEE9;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
