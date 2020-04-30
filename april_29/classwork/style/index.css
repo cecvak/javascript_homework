@@ -9,7 +9,8 @@
 body {
     font-family: Flat, Arial, sans-serif;
     background-color: #F6704B;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
