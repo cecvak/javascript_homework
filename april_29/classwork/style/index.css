@@ -13,7 +13,11 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+} 
+
+h1, h2 {
+    text-align: center;
 }
 
 h4 {
@@ -28,9 +32,23 @@ p {
     padding: 20px 15px 20px 15px;
 }
 
-.accordion {
-    width: 380px;
+.container {
+    max-width: 380px;
+    width: 100%;
     height: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; */
+    position: relative;
+}
+
+.accordion {
+    position: absolute;
+    max-width: 380px;
+    width: 100%;
+    /* height: auto; */
+    top: 20%;
 }
 
 .title {
