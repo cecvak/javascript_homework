@@ -1,0 +1,12 @@
+$font_serif: 'Playfair Display', serif;
+$font_sans: 'Open Sans', sans-serif;
+
+$primary_color_dark: #000000;
+$primary_color_light: #ffffff;
+$color_bright: #EECD31;
+
+body {
+    background-color: $primary_color_dark;
+    color: $primary_color_light;
+}
+
