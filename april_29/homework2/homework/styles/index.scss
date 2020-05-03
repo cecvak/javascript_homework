@@ -10,12 +10,6 @@ $primary_color_dark: #000000;
 $primary_color_light: #ffffff;
 $color_bright: #EECD31;
 
-// $slick-font-family: FontAwesome;
-// $slick-prev-character: "\f053";
-// $slick-prev-character: "\f054";
-
-
-
 p {
     margin: 0;
 }
@@ -65,8 +59,8 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap;
     margin-bottom: 32px;
+    align-items: center;
 }
 
 .header {
@@ -99,19 +93,22 @@ body {
     font-weight: 600;
 }
 
+.navigation_list a {
+    text-decoration: none;
+    color: $primary_color_light;
+}
+
+.navigation_list a:hover {
+    text-decoration: none;
+    color: $color_bright;
+}
+
 .slider {
     max-width: 1380px;
     width: 100%;
     max-height: 550px;
     height: 100%;
-    // align-self: flex-end;
     margin-top: auto;
-    //  display: flex;
-    //  flex-direction: column;
-    //  align-items: center;
-    //  justify-content: center;
-    //  align-content: center;
-    
 }
 
 .slick-initialized .slick-slide {
@@ -119,9 +116,7 @@ body {
 }
 
 .slider_content {
-    // max-width: 1380px;
     width: 100%;
-    // max-height: 619px;
     height: 100%;
     margin: auto;
     display: flex;
@@ -144,11 +139,10 @@ body {
 }
 
 .image {
-    max-height: 250px;
-    height: 100%;
+    max-width: 300px;
+    width: 100%;
     margin-top: 38px;
 }
-
 
 .content_button {
     margin-top: 38px;
@@ -162,9 +156,14 @@ body {
     border-radius: 25px;
 }
 
+.content_button:hover {
+    background-color: $primary_color_light;
+    color: $color_bright;
+}
 
-
-.slick-dots li button {
+.slider_one_h4 {
+    max-width: 750px;
+    width: 100%;
 }
 
 .slick-dots li.slick-active button:before {
@@ -179,7 +178,6 @@ body {
 
 .slick-prev, .slick-next {
     top: 30%;
-    // background: white;
 }
 
 .slick-next {
@@ -194,10 +192,6 @@ body {
 .slick-next:before {
     font-family: FontAwesome;
     font-size: 35px;
-    // width: 19px;
-    // height: 35px;
-//   color: black;
-//   background: black;
 }
 
 .slick-prev:before {
@@ -221,26 +215,25 @@ body {
     transition: 0.5s;
   }
 
-  .overlay-content {
+  .overlay_content {
     position: relative;
     top: 25%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
   }
 
   .overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #ffffff;
+    font-family: $font_sans;
+    color: $primary_color_light;
     display: block;
     transition: 0.3s;
   }
   
   .overlay a:hover, .overlay a:focus {
-    color: blue;
+    color: $color_bright;
   }
   
   .overlay .closebtn {
@@ -253,26 +246,27 @@ body {
   .navigation_list .icon_burger {
     display: none;
     text-decoration: none;
-    color: #ffffff;
+    color: $primary_color_light;
 }
 
-/* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
 
-// }
+    .slider_content_content {
+        width: 80%;
+    }
 
+    h2 {
+        font-size: 50px;
+    }
 
-/* Medium devices (landscape tablets, 768px and up) */
-// @media only screen and (min-width: 768px) {
+    .header {
+        width: 80%;
+    }
+}
 
-// }
-
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
     h1 {
-        // font-family: $font_serif;
         font-size: 60px;
-        // margin-bottom: 21px;
     }
     
     h2 {
@@ -317,8 +311,6 @@ body {
 
 }
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
     h1 {
         font-size: 40px;
@@ -327,16 +319,15 @@ body {
     h2 {
         font-size: 30px;
     }
-
 }
 
 @media only screen and (max-width: 500px) {
-    // h1 {
-    //     font-size: 30px;
-    // }
+    .image {
+        width: 70%;
+    }
+
+    .slider_content_content {
+        width: 70%;
+    }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {
-
-// }
