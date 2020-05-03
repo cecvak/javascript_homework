@@ -56,6 +56,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    width: 100%;
 }
 
 .container {
@@ -74,6 +75,7 @@ body {
     justify-content: space-between;
     height: 49px;
     margin-top: 15px;
+    width: 100%;
 }
 
 .header_logo {
@@ -180,6 +182,14 @@ body {
     // background: white;
 }
 
+.slick-next {
+    right: 20px;
+}
+
+.slick-prev {
+    left: 20px;
+}
+
 .slick-prev:before,
 .slick-next:before {
     font-family: FontAwesome;
@@ -197,3 +207,136 @@ body {
 .slick-next:before {
     content: "\f054";
 }
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: blue;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  .navigation_list .icon_burger {
+    display: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+
+// }
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+
+// }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    h1 {
+        // font-family: $font_serif;
+        font-size: 60px;
+        // margin-bottom: 21px;
+    }
+    
+    h2 {
+        font-family: $font_serif;
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-family: $font_serif;
+        font-size: 30px;
+    }
+    
+    h4 {
+        font-family: $font_sans;
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    .slider_content_content {
+        width: 80%;
+    }
+
+    .slick-prev {
+        left: 25px;
+    }
+
+    .slick-next {
+        right: 25px;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+
+    .navigation_list a {
+        display: none;
+    }
+
+    .navigation_list a.icon_burger {
+        display: flex;
+    }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    // h1 {
+    //     font-size: 30px;
+    // }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+
+// }

@@ -24,18 +24,40 @@
             <div class="header_logo">
                 <p>Intro</p>
             </div>
-            <nav class="header_navigation">
-                <ul class="navigation_list">
-                    <li class="navigation_listItem">Home</li>
-                    <li class="navigation_listItem">About</li>
-                    <li class="navigation_listItem">Services</li>
-                    <li class="navigation_listItem">Works</li>
-                    <li class="navigation_listItem">Events</li>
-                    <li class="navigation_listItem">Contact</li>
-                </ul>
-            </nav>
+
+            <!-- Navigation overlay -->
+            <!-- <div id="navigation" class="overlay"> -->
+                <!-- button to close overlay navigation -->
+                <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a> -->
+
+                <nav class="header_navigation">
+                    <ul class="navigation_list">
+                        <li class="navigation_listItem"><a href="#home">Home</a></li>
+                        <li class="navigation_listItem"><a href="#about">About</a></li>
+                        <li class="navigation_listItem"><a href="#services">Services</a></li>
+                        <li class="navigation_listItem"><a href="#works">Works</a></li>
+                        <li class="navigation_listItem"><a href="events">Events</a></li>
+                        <li class="navigation_listItem"><a href="#contact">Contact</a></li>
+                        <li class="nav_item"><a href="javascript:void(0);" class="icon_burger" onclick="openNav()">
+                            <i class="fas fa-bars"></i>
+                          </a></li>
+                    </ul>
+                </nav>
+            <!-- </div> -->
+
         </header>
 
+        <div id="navigation" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay_content">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Works</a>
+                <a href="#">Events</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
     
     
 
