@@ -1,0 +1,62 @@
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.searchbar {
+  margin: 30px;
+}
+
+.result-container {
+  margin: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.movieContainer {
+  display: flex;
+  padding: 30px;
+  background-color: burlywood;
+}
+
+.posterContainer {
+  max-width: 300px;
+  width: 100%;
+}
+
+.infoContainer {
+  margin-left: 30px;
+}
+
+.movieCast {
+  color: blue;
+}
+
+.movieCast:before {
+  content: "Cast: ";
+}
+
+.movieDirector:before {
+  content: "Director: ";
+}
+
+.movieGenre:before {
+  content: "Genre: ";
+}
+
+.moviePlot:before {
+  content: "Plot: ";
+}
+
+.movieRatings:before {
+  content: "Ratings: ";
+}
+
+.movieCountry:before {
+  content: "Country: ";
+}
+
+/*# sourceMappingURL=index.css.map */
