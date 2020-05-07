@@ -23,12 +23,12 @@ $('form').submit(function(event) {
         // console.log(response.Actors);
 
         let movieTitle = $('<h2></h2>');
-        movieTitle.text(`${response.Title} ${response.Year}`);
+        movieTitle.text(`${response.Title}`);
         movieTitle.addClass('movieTitle');
 
-        // let movieYear = $('<h2></h2>');
-        // movieYear.text(response.Year);
-        // movieYear.addClass('movieYear');
+        let movieYear = $('<p></p>');
+        movieYear.text(response.Year);
+        movieYear.addClass('movieYear');
 
         let movieCountry = $('<p></p>');
         movieCountry.text(response.Country);
@@ -64,7 +64,7 @@ $('form').submit(function(event) {
         infoContainer.append(
             // poster,
             movieTitle,
-            // movieYear,
+            movieYear,
             movieCountry,
             director,
             genre,
