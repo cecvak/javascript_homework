@@ -1,0 +1,1 @@
+Write a code that displays a list of employees via AJAX (from employees.json file) and depending on the “inOffice” status, assign class=“in” or class=“out” to a list item. Place the list in a div with id “employeeList”. Styles and markup attached.
