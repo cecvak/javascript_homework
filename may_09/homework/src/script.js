@@ -10,20 +10,20 @@
 
 let getTasks = localStorage.getItem('tasks');   //get items as string from local storage
 // console.log(getTasks); 
-console.log(typeof getTasks);   //string
-let resultTasks = getTasks ? JSON.parse(getTasks) : [];     //parse string to object and store in array
-console.log(typeof resultTasks);    //object
-console.log(resultTasks);   // displays array of objects
+// console.log(typeof getTasks);   //string
+let tasks = getTasks ? JSON.parse(getTasks) : [];     //parse string and store in array
+// console.log(typeof tasks);    //object
+// console.log(tasks);   // displays array
 
 $('form').submit(function(event) {
     // event.preventDefault();      //prevent page from reloading
 
     let task = $('#task').val();    //get input value from form
-    console.log(task);  
-    // resultTasks.push({'task' : task});  //push input value to array
-    resultTasks.push(task);
+    // console.log(task);  
+    // tasks.push({'task' : task});  
+    tasks.push(task);         //push input value to array
     // console.log(tasks);
-    localStorage.setItem('tasks', JSON.stringify(resultTasks));     //store in local storage as string
+    localStorage.setItem('tasks', JSON.stringify(tasks));     //store in local storage as string
 })
 
 
@@ -32,7 +32,7 @@ $(function() {
 
     let list = $('<ul></ul>');                          // create list
     // let list = document.getElementById('task-list');
-        $.each(resultTasks, function (key, value) {     //go through array and append as list items
+        $.each(tasks, function (key, value) {     //go through array and append as list items
             list.append(`                               
                 <li>${value}</li>
                 `);
